@@ -49,6 +49,7 @@
 		8BD42C34256EA066006EDE5B /* PushSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD42C38256EA066006EDE5B /* PushSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSampleAppUITests.swift; sourceTree = "<group>"; };
 		8BD42C3A256EA066006EDE5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD42C4C256EA082006EDE5B /* PushSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushSampleApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		8BD42C15256EA063006EDE5B /* PushSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				8BD42C4C256EA082006EDE5B /* PushSampleApp.entitlements */,
 				8BD42C16256EA063006EDE5B /* AppDelegate.swift */,
 				8BD42C18256EA063006EDE5B /* SceneDelegate.swift */,
 				8BD42C1A256EA063006EDE5B /* ContentView.swift */,
@@ -436,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PushSampleApp/PushSampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PushSampleApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 6WFKUJRXCU;
@@ -457,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PushSampleApp/PushSampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PushSampleApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 6WFKUJRXCU;
