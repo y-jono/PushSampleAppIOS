@@ -14,7 +14,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) {granted, error in
+            if let error = error {
+                // エラー時の処理
+                print("requestAuthorization error")
+                print(error)
+                return
+            }
+            if granted {
+                // デバイストークンの要求
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+        
         return true
+    }
+
+    // デバイストークンが取得されたら呼び出されるメソッド
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenString = deviceToken.map { String(format: "%.2hhx", $0) }.joined()
+        print("deviceToken:" + tokenString)
     }
 
     // MARK: UISceneSession Lifecycle
